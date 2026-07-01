@@ -14,7 +14,7 @@ test('deve consultar um pedido', async ({ page }) => {
 
   // Assert
   const containerPedido = page.getByRole('paragraph')
-    .filter({ hasText: /^Pedidos$/ })
+    .filter({ hasText: /^Pedido$/ })
     .locator('..') // Sobe para o elemento pai (a div que agrupa ambos)
 
 await expect(containerPedido).toContainText(ORDER_ID)
